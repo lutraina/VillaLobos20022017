@@ -1,0 +1,29 @@
+services:
+    blog_serving.antispam:
+        class: Blog\ServingBundle\AntispamServing\Antispam
+        arguments: ['@logger', '@mailer', '%locale%', '50']
+        tags:
+            -  { name: twig.extension }
+            
+    blog_serving.ckeditor:
+        class: Blog\ServingBundle\Form\Type\CkeditorType
+        tags:
+            - { name: form.type, alias: ckeditor }  
+            
+    blog_twig_extension:
+        class: Blog\ServingBundle\Twig\AppExtension
+        arguments: ['@logger']
+        tags:
+            - { name: twig.extension }
+
+    blog.twig_extension_chain:
+        class: Blog\ServingBundle\Twig\ExtensionChain
+        arguments: ['@logger']
+        
+#    logger.stream_handler:
+#        class: Monolog\Handler\StreamHandler
+#        arguments: ['%root_dir%/test.log']
+#        
+        
+        
+        

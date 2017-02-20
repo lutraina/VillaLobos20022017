@@ -1,0 +1,351 @@
+		
+/***********SAMUEL   **********/
+
+ 	
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+/*    padding-top: 50px; */
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 12 pt;
+    overflow: hidden;
+}
+
+
+/* -------------------------------------------------
+* Style pour la barre de navigation
+-------------------------------------------------*/
+
+/* Colore le menu actif dans la barre de navigation */
+.active-menu {
+    background-color: #644668;
+}
+
+/* Couleur de la barre de navigation */
+.navbar-custom {
+	background-color: rgb(110,30,120);
+}
+
+#menu-mylabel, #menu-mylabel ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+#menu-mylabel li{
+	display:inline-block;
+	position:relative;
+}
+
+#menu-mylabel ul li{
+	display:inherit;
+	padding-left: 15pt;
+}
+
+#menu-mylabel ul{
+	position:absolute;
+	z-index: 1000;
+	max-height:0;
+	left: 0;
+	right: 0;
+	overflow:hidden;
+	-moz-transition: .8s all .3s;
+	-webkit-transition: .8s all .3s;
+	transition: .8s all .3s;
+	width: 12em;
+}
+
+#menu-mylabel li:hover ul{
+	max-height:15em;
+}
+
+/* background des liens menus */
+#menu-mylabel li:first-child{
+}
+
+#menu-mylabel li:nth-child(2){
+}
+
+#menu-mylabel li:nth-child(3){
+}
+
+#menu-mylabel li:last-child{
+}
+
+/* background des liens sous menus */
+#menu-mylabel li:first-child li{
+}
+
+#menu-mylabel li:nth-child(2) li{
+	background:rgb(161, 0, 107);
+}
+
+#menu-mylabel li:nth-child(3) li{
+}
+
+#menu-mylabel li:last-child li{
+}
+
+/* background des liens menus et sous menus au survol */
+#menu-mylabel li:first-child:hover, #menu-mylabel li:first-child li:hover{
+}
+
+#menu-mylabel li:nth-child(2):hover, #menu-mylabel li:nth-child(2) li:hover{
+}
+
+#menu-mylabel li:nth-child(3):hover, #menu-mylabel li:nth-child(3) li:hover{
+}
+
+#menu-mylabel li:last-child:hover, #menu-mylabel li:last-child li:hover{
+}
+/* les a href */
+#menu-mylabel a{
+	text-decoration:none;
+	display:block;
+	padding:8px 32px;
+	color:#fff;
+}
+
+#menu-mylabel ul a{
+	padding:8px 0;
+}
+
+#menu-mylabel li:hover li a{
+	text-transform:inherit;
+	color:	#fff;
+}
+
+#menu-mylabel li:hover a, #menu-mylabel li li:hover a{
+	color:	rgb(225, 225, 225);
+}
+/*------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------
+ * Style appliqué pour le footer
+ -----------------------------------------------*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: rgb(195,190,180);
+    padding-top: 5px;
+}
+
+.footer .container .left img{
+	vertical-align: middle;
+}
+
+.footer .container .left {
+	float: left;
+	width: 20%;
+	text-align: left;
+	padding-left: 15pt;
+}
+
+.footer .container .middle {
+	float: left;
+	width: 50%;
+	text-align: center;
+	color: rgb(130, 120, 111);
+}
+
+.footer .container .right{
+	float: left;
+	width: 20%;
+	text-align: right;
+	margin-left: 5pt;
+	color: rgb(130, 120, 111);
+}
+/*-------------------------------------------------*/
+
+    
+    
+/* Contenu  */
+
+
+body #contenu {
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+/* Vue /labels */
+
+h1 {
+    background-color: rgb(185,185,185);
+    font-family: "Arial";
+	font-size: 20px;
+	font-weight: normal;
+	color: white;    
+    text-align: center;    
+}
+
+.tableau_labels {
+	border-collapse: collapse;
+    margin: auto;
+}
+
+.tableau_labels td, th {
+    font-family: "Arial";
+	font-size: 16px;
+	padding: 15px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+.tableau_labels_entete th {
+    background-color: rgb(161,0,107);
+    color: white;
+	font-weight: bold;
+    text-align: left;
+}
+
+.tableau_labels_ligne td {
+	border-top: 1px solid black;
+}
+
+.tableau_labels_ligne:nth-child(odd) {
+    background-color: rgb(185,185,185);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+.tableau_labels_ligne:nth-child(even) {
+    background-color: rgb(225,225,225);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+/* Vue /demandes */
+
+.tableau_demandes {
+	border-collapse: collapse;
+    margin: auto;
+}
+
+.tableau_demandes td, th {
+    font-family: "Arial";
+	font-size: 16px;
+	padding: 15px;
+}
+
+.tableau_demandes_entete  th {
+    background-color: rgb(0,136,206);
+    color: white;
+	font-weight: bold;
+    text-align: left;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;	
+}
+
+.tableau_demandes_ligne td {
+	border-top: 1px solid black;
+	border-left: 1px solid white;
+	border-right: 1px solid white;	
+}
+
+.tableau_demandes_ligne:nth-child(odd) {
+    background-color: rgb(185,185,185);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+.tableau_demandes_ligne:nth-child(even) {
+    background-color: rgb(225,225,225);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+/* Vue /demandes/new */
+
+#demandes, 
+#recherche  {
+     margin: auto;
+     width: 800px     
+}
+
+#demandes > div, 
+#recherche > div {
+     margin : 10px;
+}
+
+#demandes > div > label, 
+#recherche > div > label {
+    font-family: "Arial";
+	font-size: 20px;
+	font-weight: normal;
+	color: black;
+	display:inline-block;
+	width: 400px;
+	vertical-align: top;
+}	
+
+#demandes > div > input, textarea {
+	width: 300px;
+}	
+
+#demandes > div > div {
+	display:inline-block;
+}	
+
+#demandes > div > .required:before {
+    color: red;
+    content:"*"; 
+	margin: 0px 0px 0px -12px;
+	padding: 0 5px 0 0;
+}
+
+#demandes > div > div > label  {
+	display:none;
+}
+
+#demandes input[type="radio"], img {
+	display: inline;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+
+.bouton{
+    background-color: rgb(255, 255, 254);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    color: black;
+    display: block;
+    float: right;
+    font-family: "Arial";
+    font-size: 15px;
+    height: 2em;
+    margin: 10px;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#menu .bouton{
+    width: 200px;
+    height: 50px;
+}
+
+#menu{
+    margin: 20px;
+}
+
+/************************************/		

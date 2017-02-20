@@ -1,0 +1,38 @@
+{% extends '::base.body.html.twig' %}
+
+
+{% block banner %}
+
+{{ knp_menu_render('BlogServingBundle:Builder:mainMenu') }}
+{{ checkIfSpam(text) }}
+
+{% endblock %}
+
+{% block sectionTwo %}
+    
+<section id="two" class="wrapper style3 special">
+        <div class="inner">
+                <header class="major">
+                        <h2>Les bijoux</h2>
+                        <p>Toutes nos bijoux sont fabriqués dans notre magasin.</p>
+                </header>
+                <ul class="features">
+                    {% for biographie in biographies %}
+                        <li class="icon fa-paper-plane-o">
+                                <a href="{{ path('homepage_show', { 'id': biographie.id }) }}"><input type="submit" value="Voir"></a>
+                                
+                                <p>
+                                    <br/>
+                                    <span style = "color:#eeeeee !important;">{{biographie.description}}</span>
+                                    </p>
+                        </li>
+                    {% endfor %}	
+                </ul>
+        </div>
+</section>
+
+{% endblock %}
+
+
+
+
