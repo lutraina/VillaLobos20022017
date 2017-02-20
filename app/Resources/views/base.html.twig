@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+            {% block stylesheets %}
+                {% stylesheets filter='cssrewrite'
+                '@BlogServingBundle/Resources/public/css/main.css'
+                '@BlogServingBundle/Resources/public/css/jquery-ui.css'
+                %}
+                <link rel="stylesheet" href="{{ asset_url }}"/>
+                {% endstylesheets %}
+            {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div style="width:100% ;height: 100%; overflow: auto;">
+            <div id="contenu">
+                {% block banner %}
+                {% endblock %}
+                    
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+        <!-- Scripts -->
+        {% block javascripts %}
+            {% javascripts
+                '%kernel.root_dir%/../vendor/components/jquery/jquery.js'
+                '%kernel.root_dir%/../vendor/components/jqueryui/jquery-ui.js'
+                '@BlogServingBundle/Resources/public/js/jquery.scrolly.min.js'
+                '@BlogServingBundle/Resources/public/js/jquery.scrollex.min.js'
+                '@BlogServingBundle/Resources/public/js/skel.min.js'
+                '@BlogServingBundle/Resources/public/js/util.js'
+                '@BlogServingBundle/Resources/public/js/main.js'
+            %}
+            <script src="{{ asset_url }}"/></script>
+            {% endjavascripts %}
+        {% endblock %}
+        {% block footer %}
+        {% endblock footer %}
+    </body>
+</html>

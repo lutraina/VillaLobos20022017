@@ -1,0 +1,120 @@
+{% extends "layout/base.html" %}
+
+{% block styles %}
+{#    {{ super() }} <!-- Insert le contenu du bloc styles de base.html -->  #}
+    <link href="{{url_for('static', filename='css/cyberstore-style.css')}}" rel="stylesheet">
+{% endblock styles %}
+
+
+{% block title %}{{title|default}}{% endblock title %}
+
+{% block content %}
+     <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <div class="panel panel-brown">
+                    <a href="https://condor.sncf.fr" target="_blank" onclick="document.body.style.cursor='wait'; return true;">
+                        <div class="panel-heading">
+                           <div class="row text-center">
+                               <div class="col-xs-3 ">
+                                   <span class="fa-stack fa-3x">
+                                       <i class="fa fa-contao fa-stack-2x"></i>
+                                   </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">Condor</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-green">
+                    <a href="">
+                        <div class="panel-heading">
+                            <div class="row text-center">
+                                <div class="col-xs-3 ">
+                                    <span class="fa-stack fa-3x">
+                                        <i class="fa fa-graduation-cap fa-stack-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">MyLabel</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-red">
+                    <a href="">
+                        <div class="panel-heading">
+                            <div class="row text-center">
+                                <div class="col-xs-3 ">
+                                    <span class="fa-stack fa-3x">
+                                        <i class="fa fa-certificate fa-stack-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">PreKonDemand</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-blue">
+                    <a href="">
+                        <div class="panel-heading">
+                            <div class="row text-center">
+                                <div class="col-xs-3 ">
+                                    <span class="fa-stack fa-3x">
+                                        <i class="fa fa-certificate fa-stack-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">Audit Flash</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-prune">
+                    <a href="">
+                        <div class="panel-heading">
+                            <div class="row text-center">
+                                <div class="col-xs-3 ">
+                                    <span class="fa-stack fa-3x">
+                                        <i class="fa fa-certificate fa-stack-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">MyAdmin</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock scripts %}

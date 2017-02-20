@@ -1,0 +1,4 @@
+blog_serving:
+    resource: "@BlogServingBundle/Controller/"
+    type:     annotation
+    prefix:   /
